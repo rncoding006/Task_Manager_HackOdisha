@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task & Expense Manager</title>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">TE</div>
+        <div>
+          <h1>Task & Expense Manager</h1>
+          <p class="muted">Simple • Clean • Demo-ready</p>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div class="chip">Local Demo</div>
+        <div class="chip">No Auth</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <!-- Tasks -->
+    <section class="card">
+      <div class="card-head">
+        <h2>✅ Tasks</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <input id="task-input" placeholder="Add a new task..." />
+          <button id="add-task-btn" class="btn primary">Add</button>
+        </div>
+
+        <ul id="task-list" class="list"></ul>
+      </div>
+    </section>
+
+    <!-- Expenses -->
+    <section class="card">
+      <div class="card-head">
+        <h2>💰 Expenses</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <input id="expense-amount" placeholder="Amount (e.g. 150)" inputmode="numeric" />
+          <input id="expense-category" placeholder="Category (e.g. Food)" />
+          <button id="add-expense-btn" class="btn success">Add</button>
+        </div>
+
+        <ul id="expense-list" class="list"></ul>
+      </div>
+    </section>
+
+    <!-- Chart -->
+    <section class="card full-width">
+      <div class="card-head">
+        <h2>📊 Expense Chart</h2>
+      </div>
+      <div class="card-body chart-wrap">
+        <canvas id="expense-chart"></canvas>
+      </div>
+    </section>
+
+    <!-- Small footer card with tips -->
+    <section class="card info">
+      <div class="card-head">
+        <h3>Tips</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>Make frequent commits while hacking.</li>
+          <li>Push your repo before the hackathon deadline.</li>
+          <li>If backend isn't reachable, check port 5000 and CORS.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Made for HackOdisha demo • Run backend at <code>http://localhost:5000</code></small>
+    </div>
+  </footer>
+
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
